@@ -1,0 +1,56 @@
+.red {
+    color: red;
+}
+
+div.container {
+    h4 {
+        color: blue;
+    }
+
+    // p {
+    //     color: green;
+    // }
+}
+
+$메인컬러: #cccccc;
+
+.main-color {
+    color: $메인컬러;
+}
+
+
+
+@mixin 함수() {
+    background: #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+}
+
+.my-alert {
+
+    @include 함수()
+}
+
+.my-alert2 {
+
+    @extend .my-alert;
+    background: #333;
+    color: white;
+
+}
+
+.wow-enter {
+
+    opacity: 0
+}
+
+.wow-enter-active {
+
+    opacity: 1;
+
+    transition: all 500ms;
+
+}
